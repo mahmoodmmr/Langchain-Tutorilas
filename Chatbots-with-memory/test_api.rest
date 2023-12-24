@@ -1,0 +1,12 @@
+# File: chat_api.rest
+
+# Base URL of your Flask API
+@base_url = http://localhost:5000
+
+# POST request to ask a question
+POST {{base_url}}/ask
+Content-Type: application/json
+
+{
+  "question": "What is my diet strategies?"
+}
