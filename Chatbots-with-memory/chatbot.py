@@ -13,7 +13,7 @@ from langchain.document_loaders import PyPDFLoader
 
 import os
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "sk-**"
 llm_name = "gpt-3.5-turbo"
 
 
@@ -66,6 +66,17 @@ class cbfs(param.Parameterized):
             "G:\\Desktop\\Simple Sample\\AiHealth\\Job 4\\nutrirtion_nemone_Diet.pdf"
         )
         self.qa = load_db(self.loaded_file, "stuff", 4)
+        # self.loaded_file = (
+        #     "G:\\Desktop\\Simple Sample\\AiHealth\\Job 4\\nutrirtion_nemone_Diet.pdf"
+        # )
+        # current_directory = os.path.dirname(os.path.abspath(__file__))
+        # self.loaded_file = os.path.join(current_directory, "nutrirtion_nemone_Diet.pdf")
+        # absolute_path = (
+        #     "G:\\Desktop\\Simple Sample\\AiHealth\\Job 4\\nutrirtion_nemone_Diet.pdf"
+        # )
+        # self.loaded_file = os.path.relpath(absolute_path, current_directory)
+
+        # self.qa = self.load_db(self.loaded_file, "stuff", 4)
 
     def call_load_db(self, count):
         if count == 0 or file_input.value is None:  # init or no file specified :

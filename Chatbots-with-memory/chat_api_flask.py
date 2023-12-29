@@ -8,7 +8,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chat_models import ChatOpenAI
 import os
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "sk**"
 llm_name = "gpt-3.5-turbo"
 
 app = Flask(__name__)
